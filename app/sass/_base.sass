@@ -1,0 +1,103 @@
+@import "bourbon"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+body
+	font-size: 16px
+	min-width: 280px
+	position: relative
+	line-height: 1.6
+	font-family: $default-font
+	overflow-x: hidden
+
+	
+form[action="mail.php"]
+	background-color: $form-bgcolor
+	border-top: 6px solid transparent
+	-moz-border-image: -moz-linear-gradient(left, #009AE1 0%, #CA0867 100%)
+	-webkit-border-image: -webkit-linear-gradient(left, #009AE1 0%, #CA0867 100%)
+	border-image: linear-gradient(to right, #009AE1 0%, #CA0867 100%)
+	border-image-slice: 1
+	padding: 10px 10px 20px 10px
+	label[for="tips"]
+		font-weight: bold
+	h1,h3
+		text-align: center
+	h1
+		text-transform: uppercase
+		margin-bottom: 0
+	h3
+		text-transform: capitalize
+		font-weight: normal
+		margin-top: 0
+	p.agreement
+		font-weight: 100
+		font-size: 0.8em
+		color: #337ab7
+	input[type="text"], .tips_agreement, .button_basic, p.agreement
+		display: block
+		margin: 10px auto
+		width: 90%
+		padding: 10px
+	input[type="text"]
+		border: 1px solid rgba(227,219,222, 1)
+		color: #666666
+		&::-webkit-input-placeholder
+			color: #E5E5E5
+		&::-moz-placeholder
+			color: #E5E5E5
+		&:-moz-placeholder
+			color: #E5E5E5
+		&:-ms-input-placeholder
+			color: #E5E5E5
+.counter
+	text-transform: uppercase
+	text-align: center
+	background-color: $accent-bgcolor
+	padding: 20px
+	color: $default-bgcolor
+	.counter_number
+		font-family: droid
+		font-size: 5em
+		line-height: 1em
+		letter-spacing: 0.1em
+
+.button_basic
+	background-color: $blue
+	color: $default-bgcolor
+	font-weight: bold
+	border: none
+.email_block, .phone_block
+	display: inline-block
+	padding: 20px
+nav
+	width: 100%
+	background-color: $accent-bgcolor
+	color: $default-bgcolor
+	ul
+		display: flex
+		list-style: none
+		flex-wrap: nowrap
+		justify-content: space-between

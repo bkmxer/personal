@@ -32,7 +32,7 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 
-	
+
 form[action="mail.php"]
 	background-color: $form-bgcolor
 	border-top: 6px solid transparent
@@ -92,12 +92,27 @@ form[action="mail.php"]
 .email_block, .phone_block
 	display: inline-block
 	padding: 20px
-nav
+header nav
+	position: relative
+
 	width: 100%
-	background-color: $accent-bgcolor
+	background-color: lighten($accent-bgcolor, 5%)
 	color: $default-bgcolor
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	ul
 		display: flex
+		margin: 0 20px
+		padding-left: 0px
 		list-style: none
 		flex-wrap: nowrap
 		justify-content: space-between
+		li
+			padding: 10px
+			a, a:hover, a:focus
+				color: $default-bgcolor
+				text-decoration: none
+				font-size: 1.5em
+				text-transform: uppercase
+			&:hover
+				background-color: darken($accent_bgcolor, 5%)
+				

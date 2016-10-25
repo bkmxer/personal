@@ -82,3 +82,63 @@ $(document).ready(function() {
         lineSet();
     });
 });
+/// TOOLTIP
+$(document).ready(function(){
+    var $parent,
+        windowWidth,
+        windowHeight;
+
+    // windowSize
+    function winSize(){
+        windowWidth = $(window).width();
+        windowHeight = $(window).height();
+    }
+    winSize()
+    $(window).resize(winSize());
+
+
+    // hover
+    $('.tip__content').each(function(){
+        $(this).parent().hover(function(){
+            $(this).find('.tip__content').fadeIn('fast');
+        }, function(){
+            $(this).find('.tip__content').fadeOut('fast');
+        })
+    })
+
+
+    // tooltip position
+    $(document).mousemove(function(e){
+        var mouseY=e.clientY,
+            mouseX= e.clientX,
+            tooltipHeight,
+            tooltipWidth;
+
+        $('.tip__content').each(function(){
+            var $tooltip = $(this);
+            $parent = $tooltip.parent();
+            tooltipHeight = $tooltip.outerHeight();
+            tooltipWidth = $tooltip.outerWidth();
+
+            $tooltip.css({
+                'left':mouseX,
+                'top':mouseY+20
+            });
+            //reposition
+            if (tooltipWidth+mouseX > windowWidth)  {
+                $tooltip.css({
+                    'left':mouseX-tooltipWidth-20
+                });
+            }
+            if (tooltipHeight+mouseY + 20 > windowHeight)  {
+                $tooltip.css({
+                    'top':mouseY-tooltipHeight-20
+                });
+            }
+
+        });//end each
+
+    });//end of mouseover
+
+
+});//ready

@@ -5,3 +5,49 @@
 //Custom styles here
 
 @import "media"
+
+.sectionGraybg
+  background-color: $alt-bgcolor
+  padding-bottom: 50px
+  &__heading
+    text-align: center
+.lastPicWrapper
+  &__lastPic
+    display: block
+    margin: 100px auto 0 auto
+    width: 80%
+    &--lessmargin
+      margin: 10px
+      width: 120%
+.leftDescription
+  &__header
+    font-size: 1.2em
+  &__details
+    font-size: 0.8em
+
+.ratings
+  &__ratingBar
+    color: $default-bgcolor
+    padding: 5px 20px
+    border: 1px solid #DDDDDD
+    margin-bottom: 10px
+    background-color: #F3F3F3
+    position: relative
+    *
+      position: relative
+      z-index: 10
+    &--active
+      display: block
+      position: absolute
+      width: 80%
+      background-color: $accent-bgcolor
+      height: 100%
+      top: 0
+      left: 0
+    &--90
+      width: 90%
+    &--70
+      width: 70%
+.ratingBar
+  &__percentage
+    margin-left: 20px

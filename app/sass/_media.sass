@@ -5,22 +5,98 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+  header nav ul li a,
+  header nav ul li a:focus,
+  header nav ul li a:hover
+    font-size: 1.35em
+  .phone_block, .email_block
+    padding: 0.5em
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+  .body__section.body__section--Feedback.feedbackSection
+        padding-top: 0
+
+  body
+    .hamburger-menu
+      display: block
+
+  header
+    nav
+      z-index: 1200
+      position: fixed
+      left: -100%
+      width: 45%
+      top: 0
+      height: 100vh
+      min-width: 200px
+      ul
+
+        flex-direction: column
+        text-align: center
+        li
+          border-top:  1px solid $alt-bgcolor
+          a
+            width: 100%
+            display: block
+      &.toggled
+        left: 0
+    .logo
+      margin-bottom: 1em
+      img
+        width: 40% !important
+
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
-
+  .recWorksSection__gallery.hidden-md.hidden-lg
+    display: flex
+    flex-direction: row
+    .gallery__pic
+      width: 50%
+      flex-wrap: wrap
+  .pageHeader
+    &__moto
+      color: lighten($accent-bgcolor, 20%)
+      text-shadow: 2px 2px 3px rgba(255,255,255,0.1)
+      a
+       color: $accent-bgcolor
+       text-shadow: 2px 2px 3px rgba(255,255,255,0.1)
+    .email_block a, .phone_block a
+      color: lighten($accent-bgcolor, 20%)
+      text-shadow: 2px 2px 3px rgba(255,255,255,0.1)
+      font-weight: bold
+  .pricesSection__priceplanWrapper.priceplanWrapper
+    p
+      padding: 0 10%
+    h3
+      font-size: 1.7em
+  .body__section.body__section--Feedback.feedbackSection
+    padding-top: 0
+    .slider__item
+      padding-left: 5%
+      .item__pic
+        position: relative
+  section.body__section.body__section--Subscribe.subscribeScetion
+    .section__form
+      width: 80%
+      input, button
+        display: block
+        margin: 0 auto
+        width: 95%
+        margin-top: 2%
+      button
+        padding-top: 5%
+        padding-bottom: 5%
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+  .recWorksSection__gallery.hidden-md.hidden-lg
+    .gallery__pic
+      width: 100%
+
 
 
 /* Custom, iPhone Retina */
@@ -47,10 +123,56 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
-	/**/
-
+  body
+    margin-bottom: 160px
+  #footer
+    min-height: 160px
+    position: fixed
+    bottom: 0
+    width: 100%
+    z-index: -5
+  .row.table
+    display: table
+  .col-sm-4
+    &.pricesSection__priceplanWrapper
+      float: none
+      display: table-cell
+      vertical-align: top
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
 	/**/
 
+//custom media
+@media screen and (min-width: 768px)
+  .pageHeader
+    background-image: url(../img/coffee.jpeg)
+    background-size: cover
+    background-repeat: no-repeat
+    &--tableView
+      display: table
+    &__moto
+      display: block
+      position: absolute
+      top: 50%
+      left: 20%
+      width: 60%
+      color: $default-bgcolor
+      a, a:hover, a:active, a:focus
+        color: $default-bgcolor
+        text-decoration: none
+    &__leftColumn--tableView,
+    &__rightColumn--tableView
+      display: table-cell
+      vertical-align: top
+      float: none
+  .benefitsSection
+    &__row
+      &--tableview
+        display: table
+    &__leftColumn,
+    &__rightColumn,
+    &__midColumn
+      display: table-cell
+      vertical-align: top
+      float: none

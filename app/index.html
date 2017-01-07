@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Title</title>
+	<title>C-CRAFTED</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,12 +38,14 @@
 	<!-- Load Custom CSS Start -->
 	<!--<Deject>--><script>loadCSS( "header.min.css?ver=1.0.0", false, "all" );</script><!--</Deject>-->
 	<script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
+    <script>loadCSS( "libs/fancybox/jquery.fancybox.css?ver=1.0.0", false, "all" );</script>
 	<script>loadCSS( "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css", false, "all" );</script>
 	<!-- Load Custom CSS End -->
 
 	<!-- Load Custom CSS Compiled without JS Start -->
 	<noscript>
 		<link rel="stylesheet" href="css/fonts.min.css">
+        <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css">
 		<link rel="stylesheet" href="css/main.min.css">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 	</noscript>
@@ -61,28 +63,30 @@
 </head>
 
 <body>
-
-<header class="pageHeader">
+<div class="hamburger-menu">
+    <div class="bar"></div>
+</div>
+<header class="pageHeader" id="header">
 	<div class="container">
 		<div class="row pageHeader__row--tableView">
-			<div class="col-sm-7 pageHeader__leftColumn pageHeader__leftColumn--tableView">
+			<div class=" col-sm-7 pageHeader__leftColumn pageHeader__leftColumn--tableView">
 				<div class="pageHeader__moto">
 					<h1>CAREFULLY CRAFTED</h1>
 					<p>We Design High Conversion landing page templates</p>
-					<a href="#"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Watch how it works</a>
+					<a href="https://www.youtube.com/watch?v=sGsA7oKoQhI" target="_blank"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Watch how it works</a>
 				</div>
 			</div>
 
-			<div class="col-sm-5 pageHeader__rightColumn pageHeader__rightColumn--tableView">
+			<div class=" col-sm-5 pageHeader__rightColumn pageHeader__rightColumn--tableView">
 				<div class="email_block">
 					<a href="mailto: ilchuk.anton@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> ilchuk.anton@gmail.com
 
 					</a>
 				</div>
 				<div class="phone_block">
-					<a href="mailto: ilchuk.anton@gmail.com">
+					<a href="tel:3(095)1233344">
 						<i class="fa fa-phone" aria-hidden="true"></i>
-						+3 (095) 20194
+						+3 (095) 123 33 44
 
 
 					</a>
@@ -95,7 +99,7 @@
 					<input type="text" name="PHONE of person" placeholder="And your phone number" class="input_basic">
 					<div class="tips_agreement">				<input type="checkbox" name="wants tips" value="true" id="tips">
 						<label for="tips">Send me tips</label></div>
-					<input type="submit" value="CALL ME BACK NOW" class="button_basic">
+					<input type="submit" value="CALL ME BACK NOW" class="button_basic" onclick="alert('thanks for your request')">
 					<p class="agreement">By clicking "Call me back now" you are agreeing to the Terms of Service and Private Policy</p>
 				</form>
 				<div class="counter">
@@ -107,22 +111,22 @@
 
 
 	</div>
-	<nav class="nav-underline">
+	<nav class="nav-underline" id="nav">
 		<ul class="navigation ">
-			<a href="#"><span class="logo">LOGOTYPE</span></a>
+			<a href="#header" class="logo"><img src="img/coffee-cup.svg" alt=""  style="width: 50px; margin: 0.2em " /></a>
 
-			<li class="li navigation_item active"><a href="#">Home</a></li>
-			<li class="li navigation_item"><a href="#">About</a></li>
-			<li class="li navigation_item"><a href="#">Our skills</a></li>
-			<li class="li navigation_item"><a href="#">Our work</a></li>
-			<li class="li navigation_item"><a href="#">Team</a></li>
-			<li class="li navigation_item"><a href="#">Price</a></li>
-			<li class="li navigation_item"><a href="#">Feedback</a></li>
-			<li class="li navigation_item"><a href="#">Contact</a></li>
+			<li class="li navigation_item active"><a href="#header">Home</a></li>
+			<li class="li navigation_item"><a href="#about">About</a></li>
+			<li class="li navigation_item"><a href="#skills">Our skills</a></li>
+			<li class="li navigation_item"><a href="#ourWork">Our work</a></li>
+			<li class="li navigation_item"><a href="#team">Team</a></li>
+			<li class="li navigation_item"><a href="#price">Price</a></li>
+			<li class="li navigation_item"><a href="#feedback">Feedback</a></li>
+			<li class="li navigation_item"><a href="#subscribe">Contact</a></li>
 		</ul>
 	</nav>
 </header>
-<section class="benefitsSection">
+<section class="body__section benefitsSection" id="about">
 	<div class="container">
 		<div class="row benefitsSection__row--tableview">
 			<div class="col-md-4 benefitsSection__leftColumn">
@@ -155,44 +159,62 @@
 					<h2 class="subrcribeProvocator__header">Find out why you <br>Should choose/Follow us!</h2>
 					<div class="subscribeProvocator__hr"></div>
 					<p class="subscribeProvocator__description">In today's marketplace, the practice of innovation isn't just about creating new products. It's about discovering completely new markets that meet previously unknown and therefore untapped customer needs. .</p>
-						<a href="#" class="subscribeProvocator__button">Subscribe now!</a>
+						<a href="#header" class="subscribeProvocator__button">Subscribe now!</a>
 
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="container">
+
 		<div class="row">
 			<div class="col-xs-12">
 				<hr class="benefitsSection__line benefitsSection__line--first">
 				<hr class="benefitsSection__line benefitsSection__line--second">
-
-				<div class="benefitSection__lastPicWrapper">
+                <div class="row hidden-md hidden-lg hidden-xl">
+                    <div class="col-sm-4"><div class="tip__content--mobile ">
+                        <h3>Super mobile-responsive</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, ullam.</p>
+                    </div></div>
+                    <div class="col-sm-4"><div class="tip__content--mobile">
+                        <h3>Absolutely marvelous design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, ullam.</p>
+                    </div></div>
+                    <div class="col-sm-4"><div class="tip__content--mobile">
+                        <h3>Looks great among your working environment</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, ullam.</p>
+                    </div></div>
+                </div>
+				<div class="benefitSection__lastPicWrapper ">
 					<img src="img/ipad.png" alt="Ipad image" class="lastPicWrapper__lastPic">
-					<div href="#" class="lastPicWrapper__img tooltip_button lastPicWrapper__img--first">
+					<div class="lastPicWrapper__img tooltip_button lastPicWrapper__img--first hidden-sm hidden-xs">
 						<div class="tip__content">
-							Super mobile-responsive
+							<h3>Super mobile-responsive</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, ullam.</p>
 						</div>
 
 					</div>
-					<div href="#" class="lastPicWrapper__img tooltip_button lastPicWrapper__img--second">
+					<div  class="lastPicWrapper__img tooltip_button lastPicWrapper__img--second  hidden-sm hidden-xs">
 						<div class="tip__content">
-							Absolutely marvelous design
+							<h3>Absolutely marvelous design</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, ullam.</p>
 						</div>
 
 					</div>
-					<div href="#" class="lastPicWrapper__img tip__button lastPicWrapper__img--third">
+					<div  class="lastPicWrapper__img tip__button lastPicWrapper__img--third  hidden-sm hidden-xs">
 						<div class="tip__content">
-							Looks great among your working environment
+							<h3>Looks great among your working environment</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, ullam.</p>
 						</div>
 
 					</div>
 				</div>
 			</div>
 		</div>
+
 	</div>
 </section>
-<section class="section sectionGraybg">
+<section class="body__section section sectionGraybg" id="skills">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
@@ -204,7 +226,7 @@
         </div>
         <div class="row">
             <div class="col-md-5">
-                <img src="img/ipadair.png" alt="#" class="lastPicWrapper__lastPic lastPicWrapper__lastPic--lessmargin">
+                <img src="img/ipadair.png" alt="#" class="lastPicWrapper__lastPic lastPicWrapper__lastPic--lessmargin"  style="width:100%">
             </div>
             <div class="col-md-7">
                 <div class="leftDescription">
@@ -232,24 +254,34 @@
         </div>
     </div>
 </section>
-<section class="body__section body__section--recentWorks recWorksSection">
+<section class="body__section body__section--recentWorks recWorksSection" id="ourWork">
 <div class="container">
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-4 col-sm-4">
 			<h2>Our Recent Work <br> We love that we did</h2>
 			<hr>
-			<p>Adipisci blanditiis culpa dignissimos doloribus, dolorum eos esse eum explicabo id illo labore laboriosam magnam mollitia nihil officia perspiciatis possimus praesentium quam repudiandae similique sunt tenetur veniam. 	</p>
-			<a href="#" class="subscribeProvocator__button recWorksSection__button">Subscribe now!</a>
+			<p>Continual say suspicion provision you neglected sir curiosity unwilling. Simplicity end themselves increasing led day sympathize yet. General windows effects not are drawing man garrets. 	</p>
+			<a href="#header" class="subscribeProvocator__button recWorksSection__button">Subscribe now!</a>
 		</div>
-		<div class="col-md-8">
-			<div class="recWorksSection__gallery">
+		<div class="col-md-8 col-sm-8">
+            <div class="recWorksSection__gallery hidden-md hidden-lg hidden-xl">
+                <div class="gallery__pic"><a class="fancybox"  rel="group" href="img/gallery/our_work_1_retina.jpg"><img src="img/gallery/our_work_1.jpg" alt=""></a></div>
+                <div class="gallery__pic"><a class="fancybox"  rel="group" href="img/gallery/our_work_2_retina.jpg"><img src="img/gallery/our_work_2.jpg" alt=""></a></div>
+                <div class="gallery__pic"><a class="fancybox"  rel="group" href="img/gallery/our_work_3_retina.jpg"><img src="img/gallery/our_work_3.jpg" alt=""></a></div>
+                <div class="gallery__pic"><a class="fancybox"  rel="group" href="img/gallery/our_work_4_retina.jpg"><img src="img/gallery/our_work_4.jpg" alt=""></a></div>
+                <div class="gallery__pic"><a class="fancybox"  rel="group" href="img/gallery/our_work_5_retina.jpg"><img src="img/gallery/our_work_5.jpg" alt=""></a></div>
+                <div class="gallery__pic"><a class="fancybox"  rel="group" href="img/gallery/our_work_6_retina.jpg"><img src="img/gallery/our_work_6.jpg" alt=""></a></div>
+                <div class="gallery__pic"><a class="fancybox"  rel="group" href="img/gallery/our_work_7_retina.jpg"><img src="img/gallery/our_work_7.jpg" alt=""></a></div>
+                <div class="gallery__pic"><a class="fancybox"  rel="group" href="img/gallery/our_work_8_retina.jpg"><img src="img/gallery/our_work_8.jpg" alt=""></a></div>
+            </div>
+			<div class="recWorksSection__gallery hidden-sm hidden-xs">
 				<div class="gallery__pic">
 					<div class="btn25">
 						<img src="img/gallery/our_work_1.jpg" alt="">
 						<div class="ovrly"></div>
 						<div class="buttons">
+							<a href="img/gallery/our_work_1_retina.jpg" rel="group" class="fancybox fa fa-search"></a>
 							<a href="#" class="fa fa-link"></a>
-							<a href="#" class="fa fa-search"></a>
 						</div>
 					</div>
 				</div>
@@ -258,8 +290,8 @@
 						<img src="img/gallery/our_work_2.jpg" alt="">
 						<div class="ovrly"></div>
 						<div class="buttons">
-							<a href="#" class="fa fa-link"></a>
-							<a href="#" class="fa fa-search"></a>
+                            <a href="img/gallery/our_work_2_retina.jpg" rel="group" class="fancybox fa fa-search"></a>
+							<a href="#ourWork" class="fa fa-link"></a>
 						</div>
 					</div>
 				</div>
@@ -268,8 +300,8 @@
 						<img src="img/gallery/our_work_3.jpg" alt="">
 						<div class="ovrly"></div>
 						<div class="buttons">
+                            <a href="img/gallery/our_work_3_retina.jpg" rel="group" class="fancybox fa fa-search"></a>
 							<a href="#" class="fa fa-link"></a>
-							<a href="#" class="fa fa-search"></a>
 						</div>
 					</div>
 				</div>
@@ -278,8 +310,8 @@
 						<img src="img/gallery/our_work_4.jpg" alt="">
 						<div class="ovrly"></div>
 						<div class="buttons">
-							<a href="#" class="fa fa-link"></a>
-							<a href="#" class="fa fa-search"></a>
+                            <a href="img/gallery/our_work_4_retina.jpg" rel="group" class="fancybox fa fa-search"></a>
+							<a href="#ourWork" class="fa fa-link"></a>
 						</div>
 					</div>
 				</div>
@@ -288,8 +320,8 @@
 						<img src="img/gallery/our_work_5.jpg" alt="">
 						<div class="ovrly"></div>
 						<div class="buttons">
-							<a href="#" class="fa fa-link"></a>
-							<a href="#" class="fa fa-search"></a>
+                            <a href="img/gallery/our_work_5_retina.jpg" rel="group" class="fancybox fa fa-search"></a>
+							<a href="#ourWork" class="fa fa-link"></a>
 						</div>
 					</div>
 				</div>
@@ -298,8 +330,8 @@
 						<img src="img/gallery/our_work_6.jpg" alt="">
 						<div class="ovrly"></div>
 						<div class="buttons">
-							<a href="#" class="fa fa-link"></a>
-							<a href="#" class="fa fa-search"></a>
+                            <a href="img/gallery/our_work_6_retina.jpg" rel="group" class="fancybox fa fa-search"></a>
+							<a href="#ourWork" class="fa fa-link"></a>
 						</div>
 					</div>
 				</div>
@@ -308,8 +340,8 @@
 						<img src="img/gallery/our_work_7.jpg" alt="">
 						<div class="ovrly"></div>
 						<div class="buttons">
-							<a href="#" class="fa fa-link"></a>
-							<a href="#" class="fa fa-search"></a>
+                            <a href="img/gallery/our_work_7_retina.jpg" rel="group" class="fancybox fa fa-search"></a>
+							<a href="#ourWork" class="fa fa-link"></a>
 						</div>
 					</div>
 				</div>
@@ -319,8 +351,8 @@
 						<img src="img/gallery/our_work_8.jpg" alt="">
 						<div class="ovrly"></div>
 						<div class="buttons">
-							<a href="#" class="fa fa-link"></a>
-							<a href="#" class="fa fa-search"></a>
+                            <a href="img/gallery/our_work_8_retina.jpg" rel="group" class="fancybox fa fa-search"></a>
+							<a href="#ourWork" class="fa fa-link"></a>
 						</div>
 					</div>
 				</div>
@@ -329,12 +361,215 @@
 	</div>
 </div>
 </section>
+<section class="body__section body__section--ourStory ourStorySection" id="team">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<h2>Our Story</h2>
+				<p>
+					Two exquisite objection delighted deficient yet its contained. Cordial because are account evident its subject but eat. Can properly followed learning prepared you doubtful yet him. Over many our good lady feet ask that. Expenses own moderate day fat trifling stronger sir domestic feelings. Itself at be answer always exeter up do. Though or my plenty uneasy do. Friendship so considered remarkably be to sentiments. Offered mention greater fifteen one promise because nor. Why denoting speaking fat indulged saw dwelling raillery.
+				</p>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+</section>
+<section class="body__section body__section--ourTeam ourTeamSection">
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6 col-md-3 ourTeamSection__teamMemberWrapper">
+			<img src="img/team/Nicodemo.jpg" alt="" class="ourTeamSection__photo" style="max-width: 100%">
+			<h3>Nicodemo Timon</h3>
+			<span class="ourTeamSection__place">Project Manager</span>
+		</div>
+		<div class="col-xs-6 col-md-3 ourTeamSection__teamMemberWrapper"  >
+			<img src="img/team/Borya.jpg" alt="" class="ourTeamSection__photo" style="max-width: 100%">
+			<h3>Borya Yablonsky</h3>
+			<span class="ourTeamSection__place">Backend developer</span>
+		</div>
+		<div class="col-xs-6 col-md-3 ourTeamSection__teamMemberWrapper">
+			<img src="img/team/Gaspar.jpg" alt="" class="ourTeamSection__photo" style="max-width: 100%">
+			<h3>Gaspar Anastasios</h3>
+			<span class="ourTeamSection__place">UI developer</span>
+		</div>
+		<div class="col-xs-6 col-md-3 ourTeamSection__teamMemberWrapper">
+			<img src="img/team/Felix.jpg" alt="" class="ourTeamSection__photo" style="max-width: 100%">
+			<h3>Felix Julio</h3>
+			<span class="ourTeamSection__place">Designer</span>
+		</div>
+	</div>
+</div>
+</section>
+<section class="body__section body__section--Prices pricesSection" id="price">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h2>
+					Affordable Prices & Packages
+				</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut debitis delectus doloremque error impedit maxime obcaecati perferendis repellat veniam? Aliquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, quaerat!
+				</p>
+			</div></div>
+			<div class="row table" style="">
+			<div class="col-sm-4 pricesSection__priceplanWrapper priceplanWrapper" style=" ">
+
+			<h3>STARTER</h3>
+				<span>Unlimited Updates Support</span>
+                <br>
+					<span class="price_count">29</span>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab commodi debitis ducimus hic, iste minima necessitatibus.</p>
+				<a href="#header" class="priceplanWrapper__signupbtn subscribeProvocator__button ">Signup</a>
+			</div>
+
+			<div class="col-sm-4 pricesSection__priceplanWrapper priceplanWrapper" style=" ">
+
+				<h3>BASIC</h3><span>Unlimited Updates Support</span>
+                <br>
+					<span class="price_count">49</span>
+
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum error iste natus quaerat tempore ullam unde! .</p>
+				<a href="#header" class="priceplanWrapper__signupbtn subscribeProvocator__button ">Signup</a>
+			 </div>
+			<div class="col-sm-4 pricesSection__priceplanWrapper priceplanWrapper" style=" ">
+
+				<h3>BUSINESS</h3>
+
+                <span>Unlimited Updates Support</span>
+                <br>
+					<span class="price_count">89</span>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, expedita, optio? </p>
+				<a href="#header" class="priceplanWrapper__signupbtn subscribeProvocator__button ">Signup</a>
+			</div>
+				</div>
+		</div>
+
+
+</section>
+<section class="body__section body__section--Feedback feedbackSection" id="feedback">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="feedbackSection__slider">
+					<div class="slider__item item">
+
+						<span class="item__quotesign">,,</span>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci architecto, dicta dignissimos dolorem doloribus dolorum ea esse eum ipsa maxime minima minus mollitia nobis numquam optio perferendis possimus quaerat quia quidem rem sequi soluta veniam. Aspernatur nulla porro quam velit? Aspernatur cumque dignissimos ex ipsa minima minus molestiae nemo quod rem, repudiandae suscipit tenetur, velit voluptas! Aliquid consequuntur et molestiae molestias nobis. Architecto atque dicta, dolorib  voluptatibus!
+						</p>
+                        <div class="item__pic">
+                            <img src="img/feedback_1.jpg" alt="" width="100%">
+                        </div>
+						<h3>
+							John Doe
+						</h3>
+						<hr>
+						<span>
+							Department Store General Manager
+						</span>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="body__section section body__section--Subscribe subscribeScetion">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10 col-sm-12">
+				<h2 id="subscribe" class="section__header">Subscribe To Our Newsletter</h2>
+				<p class="section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur doloribus eaque et mollitia odio.</p>
+
+					<form class="section__form" action="">
+						<input type="text" class="form__input" placeholder="Your Name">
+						<input type="text" class="form__input" placeholder="Your Email">
+						<button class="form__button form__button--pink">Get Started!</button>
+					</form>
+
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	</div>
+	<a href="#header" class="body__uplink">
+		&lt
+	</a>
+</section>
+<footer class="body__footer" id="footer">
+	<div class="container" >
+		<div class="row" style="padding-bottom: 2em;">
+			<div class="col-sm-4">
+				<div class="footer__wrapper">
+					<img src="img/locate.svg" alt="location" style="width: 1.3em"/>
+					<p>
+						<a href="https://www.google.com.ua/maps/place/%D0%9B%D0%BE%D1%81-%D0%90%D0%BD%D0%B4%D0%B6%D0%B5%D0%BB%D0%B5%D1%81,+%D0%9A%D0%B0%D0%BB%D0%B8%D1%84%D0%BE%D1%80%D0%BD%D0%B8%D1%8F,+%D0%A1%D0%A8%D0%90/@34.0201812,-118.6919205,10z/data=!3m1!4b1!4m5!3m4!1s0x80c2c75ddc27da13:0xe22fdf6f254608f4!8m2!3d34.0522342!4d-118.2436849">Los Angeles 1234, Ipsum set emt
+						Tehun Streen 008 road 234-5678</a>
+					</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="footer__wrapper">
+					<img src="img/mail.svg" alt="contacts" style="width: 1.3em"/>
+					<p>
+						<a href="mailto:some@email.com">some@email.com </a> <br>
+						<a href="mailto:professional@team.com">professional@team.com</a>
+					</p>
+				</div>
+			</div>
+			<div class="col-sm-4" >
+				<div class="footer__wrapper" style="text-align: center;">
+					<img src="img/phone-receiver.svg" alt="location" style="width: 1.3em"/>
+					<p>
+						<a href="tel:(800) 9315 3658 11">(800) 9315 3658 11</a> <br>
+						<a href="tel:(800) 9315 3658 12">(800) 9315 3658 12</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-6">
+				<p id="btm" style="margin: 1em 0; text-align: center;">Copyright  &copy 2016/2017 Anton Ilchuk</p>
+			</div>
+			<div class="col-sm-6">
+				<p class="footer__socials">
+					<a href="https://www.facebook.com/" target="_blank">
+						<img src="img/facebook-logo.svg" alt="" style="width: 50%; margin-top: 25%;">
+					</a>
+					<a href="https://twitter.com/" target="_blank">
+						<img src="img/twitter-log.svg" alt=" " style="width: 50%; margin-top: 25%; ">
+					</a>
+					<a href="https://plus.google.com/" target="_blank">
+						<img src="img/google-plus.svg" alt="" style="width: 50%; margin-top: 25%; ">
+					</a>
+					<a href="https://dribbble.com/" target="_blank">
+						<img src="img/dribble-logo.svg" alt="" style="width: 50%; margin-top: 25%; ">
+					</a>
+					<a href="https://www.linkedin.com/" target="_blank">
+						<img src="img/linkedin-logo.svg" alt=""style="width: 50%; margin-top: 25%; ">
+					</a>
+					<a href="http://instagram.com/" target="_blank">
+						<img src="img/instagram.svg" alt="" style="width: 50%; margin-top: 25%;">
+					</a>
+
+				</p>
+			</div>
+		</div>
+	</div>
+	<hr>
+</footer>
 	<!-- Optimized loading JS Start -->
 	<script>var scr = {"scripts":[
 		{"src" : "js/libs.min.js", "async" : false},
 		{"src" : "js/common.js", "async" : false}
 		]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
 	</script>
+
 	<!-- Optimized loading JS End -->
 
 </body>
